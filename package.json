@@ -8,14 +8,7 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-<<<<<<< HEAD
     "test": "vitest"
-=======
-    "test": "vitest",
-    "test:e2e": "playwright",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
->>>>>>> dc37e0f (add storybook and testing)
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -43,10 +36,6 @@
     "@types/react-dom": "^19",
     "@types/sanitize-html": "^2.16.2",
     "@vitejs/plugin-react": "^6.3.0",
-<<<<<<< HEAD
-=======
-    "@vitest/browser-playwright": "5.1.1",
->>>>>>> dc37e0f (add storybook and testing)
     "@vitest/coverage-v8": "^5.1.1",
     "jsdom": "^31.0.1",
     "playwright": "latest",
