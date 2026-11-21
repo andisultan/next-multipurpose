@@ -8,16 +8,33 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
+<<<<<<< HEAD
     "test": "vitest"
+=======
+    "test": "vitest",
+    "test:e2e": "playwright",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+>>>>>>> dc37e0f (add storybook and testing)
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.77.0",
     "next": "16.4.6",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "sanitize-html": "^2.18.2"
+    "sanitize-html": "^2.18.2",
+    "tailwind-merge": "^3.7.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.2",
+    "@chromatic-com/storybook": "latest",
+    "@storybook/addon-a11y": "^10.6.8",
+    "@storybook/addon-docs": "^10.6.8",
+    "@storybook/addon-onboarding": "^10.6.8",
+    "@storybook/addon-vitest": "^10.6.8",
+    "@storybook/nextjs-vite": "^10.6.8",
     "@tailwindcss/turbopack": "4.3.3",
     "@testing-library/dom": "^10.4.2",
     "@testing-library/react": "^16.3.3",
@@ -26,10 +43,17 @@
     "@types/react-dom": "^19",
     "@types/sanitize-html": "^2.16.2",
     "@vitejs/plugin-react": "^6.3.0",
+<<<<<<< HEAD
+=======
+    "@vitest/browser-playwright": "5.1.1",
+>>>>>>> dc37e0f (add storybook and testing)
     "@vitest/coverage-v8": "^5.1.1",
     "jsdom": "^31.0.1",
+    "playwright": "latest",
+    "storybook": "^10.6.8",
     "tailwindcss": "4.3.3",
     "typescript": "^5",
+    "vite": "latest",
     "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^5.1.1"
   }
