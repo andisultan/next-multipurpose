@@ -5,6 +5,7 @@
   --color-primary: #0f3d3a;
   --color-secondary: #c8f8a9;
   --color-tertiary: #f2f5f1;
+  --color-line: #ffffff1a;
   --font-forum: var(--font-forum);
 }
 
@@ -18,15 +19,6 @@
 body {
   font-size: 16px;
   color: var(--color-body);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #000000;
 }
 
 .blog-detail h1 {
