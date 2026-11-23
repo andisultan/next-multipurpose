@@ -5,7 +5,8 @@
   --color-primary: #0f3d3a;
   --color-secondary: #c8f8a9;
   --color-tertiary: #f2f5f1;
-  --color-line: #ffffff1a;
+  --color-line: #0000001a;
+  --color-line-light: #ffffff1a;
   --font-forum: var(--font-forum);
 }
 
@@ -21,38 +22,52 @@ body {
   color: var(--color-body);
 }
 
-.blog-detail h1 {
+.blog-single h1 {
   font-size: 42px;
 }
 
-.blog-detail h2 {
+.blog-single h2 {
   font-size: 34px;
 }
 
-.blog-detail h3 {
+.blog-single h3 {
   font-size: 28px;
 }
 
-.blog-detail h4 {
+.blog-single h4 {
   font-size: 20px;
 }
 
-.blog-detail h5 {
+.blog-single h5 {
   font-size: 16;
 }
 
-.blog-detail h6 {
+.blog-single h6 {
   font-size: 12;
 }
 
-.blog-detail h1,
-.blog-detail h2,
-.blog-detail h3,
-.blog-detail h4 {
+.blog-single h1,
+.blog-single h2,
+.blog-single h3,
+.blog-single h4 {
   margin-bottom: 1rem;
 }
 
-.blog-detail p {
+.blog-single p {
   margin-bottom: 1.25rem;
   line-height: 1.7;
+}
+
+.blog-single table {
+  border-collapse: collapse;
+  border: 1px solid var(--color-line);
+}
+
+.blog-single tr {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.blog-single td {
+  padding: 6px 8px;
+  border-right: 1px solid var(--color-line);
 }

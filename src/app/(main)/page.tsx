@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Container } from "@/components/ui";
+import HomeHero from "@/features/home/components/hero";
 import { generateSeoMetadata } from "@/utils/metadata";
 
 export function generateMetadata(): Metadata {
@@ -11,8 +13,11 @@ export function generateMetadata(): Metadata {
 
 export default function Home() {
   return (
-    <main className="container m-auto px-6">
-      <h1>Welcome</h1>
+    <main>
+      <Container>
+        <h1>Home</h1>
+        <HomeHero />
+      </Container>
     </main>
   );
 }

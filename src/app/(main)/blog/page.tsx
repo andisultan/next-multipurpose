@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PageHeader } from "@/components/main/page-header";
 import Pagination from "@/components/pagination";
+import { Container } from "@/components/ui";
 import PostList from "@/features/post/components/post-list";
 import { getPosts } from "@/features/post/services";
 import { generateSeoMetadata } from "@/utils/metadata";
@@ -19,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
   });
 }
 
-const PAGE_SIZE = 16;
+const PAGE_SIZE = 12;
 
 export default async function PostsPage({ searchParams }: PostsPageProps) {
   const { page } = await searchParams;
@@ -33,26 +34,18 @@ export default async function PostsPage({ searchParams }: PostsPageProps) {
 
   return (
     <main>
-      <header className="bg-tertiary min-h-92.5 flex items-center">
-        <div className="container m-auto px-6">
-          <ul className="flex gap-2 pb-4 mb-4">
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-          </ul>
-          <h1 className="text-5xl font-forum pb-2">News & Resources</h1>
-          <p>Get the latest articles, insight, and news from our blog</p>
-        </div>
-      </header>
-      <div className="container m-auto px-6 py-24">
+      <PageHeader
+        title="News & Resources"
+        description="Explore expert advice, real-world case studies, and actionable strategies to drive
+            growth and innovation in your business."
+        breadcrumbs={[{ label: "Home", href: "/" }, { label: "Blog" }]}
+      />
+      <Container className="py-24">
         <PostList posts={posts} />
         {totalPages > 1 && (
           <Pagination currentPage={currentPage} totalPages={totalPages} basePath="/blog" />
         )}
-      </div>
+      </Container>
     </main>
   );
 }

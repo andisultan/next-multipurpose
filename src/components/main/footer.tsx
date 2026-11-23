@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Container } from "@/components/ui";
 
 type Menus = {
   href: string;
@@ -13,14 +14,14 @@ const menus: Menus[] = [
   { href: "/team", title: "Team" },
   { href: "/blog", title: "Blog" },
   { href: "/careers", title: "Careers" },
-  { href: "/contact-us", title: "Contact Us" },
+  { href: "/contact", title: "Contact" },
   { href: "/press-release", title: "Press Release" },
 ];
 
 export default function MainFooter() {
   return (
     <footer className="bg-primary text-white py-12">
-      <div className="container m-auto px-6">
+      <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-2">
           <div className="flex flex-col gap-6">
             <Image loading="lazy" src="/execor-logo-white.svg" width="92" height="20" alt="logo" />
@@ -75,8 +76,8 @@ export default function MainFooter() {
             </div>
           </div>
         </div>
-        <div className="flex gap-2 justify-between items-center text-sm text-gray-400 border-t border-line pt-8 mt-8">
-          <p>2026 © VamTam. All rights reserved.</p>
+        <div className="flex gap-2 justify-between items-center text-sm text-gray-400 border-t border-line-light pt-8 mt-8">
+          <p>2026 © YourSite. All rights reserved.</p>
           <ul className="flex gap-2 items-center">
             <li>
               <Link href="#">Terms & Conditions</Link>
@@ -86,7 +87,7 @@ export default function MainFooter() {
             </li>
           </ul>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 }

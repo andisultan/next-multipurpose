@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Breadcrumb } from "@/components/ui";
 import { getPostBySlug } from "@/features/post/services";
 import type { Post } from "@/features/post/type";
 import { formattedDate } from "@/utils/format-date";
@@ -68,15 +68,14 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
     <main>
       <header className="bg-tertiary min-h-92.5 flex items-center">
         <div className="container m-auto px-6 flex flex-col text-center items-center">
-          <ul className="flex gap-2 pb-4 mb-4">
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/blog">Blog</Link>
-            </li>
-          </ul>
-          <h1 className="text-5xl font-forum pb-2">{post.title.rendered}</h1>
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Blog", href: "/blog" },
+              { label: post.title.rendered },
+            ]}
+          />
+          <h1 className="text-5xl font-forum pb-8 max-w-225 m-auto mt-4">{post.title.rendered}</h1>
           <ul className="flex flex-wrap gap-2 items-center text-sm mb-4">
             {categories.map((category) => (
               <li key={category.id} className="bg-white py-1 px-2 rounded">
@@ -87,7 +86,7 @@ export default async function BlogDetailPage({ params }: BlogDetailProps) {
           </ul>
         </div>
       </header>
-      <article className="blog-detail container m-auto px-6 py-16">
+      <article className="blog-single container m-auto px-6 py-16">
         <div className="max-w-4xl mx-auto">
           {image && (
             <div className="relative aspect-video mb-10 overflow-hidden rounded-xl">
